@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const socials = [
+    {
+        platform: "github",
+        user: "txst54",
+        displayText: "Github",
+    },
+];
+---
+
+<BaseLayout pageTitle="A List of Relevant Links">
+    <h2>Socials</h2>
+    <ul>
+        {
+            socials.map((site) => (
+                <li>
+                    <a href={"https://" + site.platform + "/" + site.user}>
+                        {site.displayText}
+                    </a>
+                </li>
+            ))
+        }
+    </ul>
+</BaseLayout>

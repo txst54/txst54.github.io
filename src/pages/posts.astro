@@ -1,0 +1,14 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ListItem from "../components/ListItem.astro";
+const allPosts = await Astro.glob('../pages/posts/*.md');
+---
+
+<BaseLayout pageTitle="All of My Posts">
+    <h2>A chronologically sorted list of all posts</h2>
+    <ul>
+        {allPosts.map((post) => 
+            <ListItem url={post.url} title={post.frontmatter.title} />
+        )}
+    </ul>
+</BaseLayout>

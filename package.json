@@ -1,0 +1,32 @@
+{
+  "name": "txst54.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/txst54/txst54.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/txst54/txst54.github.io/issues"
+  },
+  "homepage": "https://github.com/txst54/txst54.github.io#readme",
+  "dependencies": {
+    "@astrojs/rss": "^3.0.0",
+    "@astrojs/tailwind": "^5.0.2",
+    "@fontsource/libre-baskerville": "^5.0.8",
+    "@fontsource/monoton": "^5.0.17",
+    "astro": "^3.4.3",
+    "tailwindcss": "^3.3.5"
+  }
+}
