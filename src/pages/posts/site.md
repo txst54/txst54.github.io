@@ -1,0 +1,15 @@
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: 'About this Site'
+pubDate: 2023-11-05
+description: 'This is a description of this site. '
+author: 'Clint Wang'
+image:
+    url: 'https://docs.astro.build/assets/full-logo-light.png'
+    alt: 'The full Astro logo.'
+tags: []
+---
+# Architecture
+This site is built using [Astro.js](https://astro.build). Astro.js was selected due to it's robustness. While it is fast and content-oriented, there exist many other frameworks that can achieve competitive rendering speeds. The defining feature of Astro.js is its [component island](https://docs.astro.build/en/concepts/islands/) and capability to render server-side, allowing for integration of other [dynamic-logic](https://en.wikipedia.org/wiki/Dynamic_web_page) frameworks without a compromise in speed. Though this is not a feature I currently require, I foresee its future utility for implementing components such as a comments section or a newsletter signup. 
+
+Styling is done using [Tailwind.css](https://tailwindcss.com/), rather than [CSS](https://en.wikipedia.org/wiki/CSS), as many of the features involved in styling using CSS can be easily encapsulated. While there are other frameworks that are effective at creating high level abstractions of CSS, Tailwind was chosen due to it's simplicity and speed when rendering. 

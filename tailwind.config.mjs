@@ -7,8 +7,9 @@ export default {
 	theme: {
 		extend: {},
 		fontFamily: {
-			'sans': ['Libre Baskerville', ...defaultTheme.fontFamily.sans],
-			'logo': ['Monoton']
+			'sans': ['Rubik', ...defaultTheme.fontFamily.sans],
+			'logo': ['Monoton'],
+			'title': ['Libre Baskerville']
 		},
 	},
 	plugins: [],

@@ -4,8 +4,7 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-    <p>Published on: {frontmatter.pubDate.slice(0, 10)}</p>
-    <p>Written by {frontmatter.author}</p>
+    <p class="text-lg flex justify-center italic pb-8">{frontmatter.pubDate.slice(0, 10)}</p>
     <div class="tags">
         {
             frontmatter.tags.map((tag: String) => (
@@ -15,5 +14,19 @@ const { frontmatter } = Astro.props;
             ))
         }
     </div>
-    <slot />
+    <article>
+        <slot />
+    </article>
 </BaseLayout>
+
+<style>
+    article :global(h1) {
+        @apply text-3xl font-bold pb-4 uppercase
+    }
+    article :global(p) {
+        @apply pl-8 hyphens-auto max-w-4xl text-xl leading-relaxed indent-12
+    }
+    article :global(a) {
+        @apply underline
+    }
+</style>

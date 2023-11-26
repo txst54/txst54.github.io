@@ -24,6 +24,7 @@
   "dependencies": {
     "@astrojs/rss": "^3.0.0",
     "@astrojs/tailwind": "^5.0.2",
+    "@fontsource-variable/rubik": "^5.0.19",
     "@fontsource/libre-baskerville": "^5.0.8",
     "@fontsource/monoton": "^5.0.17",
     "astro": "^3.4.3",
