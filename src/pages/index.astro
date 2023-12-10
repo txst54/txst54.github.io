@@ -14,17 +14,16 @@ const pageTitle = "Home Page";
 ---
 
 <BaseLayout pageTitle="">
-    <article class="pb-8">
+    <article class="pb-8 justify-center flex">
         <p>
-            THIS IS THE WEBSITE of <b>Clint Wang</b>. I write about my journey
-            in studying AI, mathematics, and art.
+            This is the website of <b>Clint Wang</b>. I write about mathematics, art, and AI.
         </p>
     </article>
     <div class="grid grid-cols-2">
         {
             tags.map((tag) => (
-                <div class="p-4">
-                    <h2 class="font-title text-2xl uppercase font-bold">{tag}</h2>
+                <div class="p-4 px-8">
+                    <h2 class="font-title text-4xl">{tag}</h2>
                     <hr class="pb-4"></hr>
                     {postsByTag[tag].map((post) => (
                         <ListItem
@@ -39,10 +38,10 @@ const pageTitle = "Home Page";
 </BaseLayout>
 <style>
     article :global(h1) {
-        @apply text-3xl font-bold pb-4 uppercase;
+        @apply text-3xl pb-4 uppercase;
     }
     article :global(p) {
-        @apply pl-8 hyphens-auto max-w-4xl text-xl leading-relaxed;
+        @apply pl-8 hyphens-auto max-w-4xl text-lg leading-relaxed;
     }
     article :global(a) {
         @apply underline;

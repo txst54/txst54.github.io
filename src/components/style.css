@@ -1,0 +1,13 @@
+
+h1 {
+    @apply text-4xl pb-4 font-title lowercase
+}
+h2 {
+    @apply text-2xl pb-4 pt-12
+}
+article p {
+    @apply pl-8 hyphens-auto max-w-4xl text-lg leading-relaxed indent-12
+}
+article a {
+    @apply underline
+}

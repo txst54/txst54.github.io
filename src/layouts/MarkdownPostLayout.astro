@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import "../components/style.css";
 const { frontmatter } = Astro.props;
 ---
 
@@ -18,15 +19,3 @@ const { frontmatter } = Astro.props;
         <slot />
     </article>
 </BaseLayout>
-
-<style>
-    article :global(h1) {
-        @apply text-3xl font-bold pb-4 uppercase
-    }
-    article :global(p) {
-        @apply pl-8 hyphens-auto max-w-4xl text-xl leading-relaxed indent-12
-    }
-    article :global(a) {
-        @apply underline
-    }
-</style>

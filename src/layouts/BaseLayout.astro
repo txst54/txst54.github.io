@@ -2,6 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '@fontsource-variable/rubik';
+import '@fontsource/source-serif-pro'
 import '@fontsource/libre-baskerville';
 const { pageTitle } = Astro.props;
 ---
@@ -16,8 +17,8 @@ const { pageTitle } = Astro.props;
   <body>
     <Header />
     <div class="flex flex-col items-center">
-        <h1 class="font-title text-5xl pb-10 font-bold">{pageTitle}</h1>
-        <div class="min-h-screen">
+        <h1 class="font-title text-5xl pb-10 lowercase">{pageTitle}</h1>
+        <div class="min-h-screen w-1/2">
             <slot />
         </div>
     </div>
