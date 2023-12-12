@@ -22,13 +22,21 @@
   },
   "homepage": "https://github.com/txst54/txst54.github.io#readme",
   "dependencies": {
-    "@astrojs/rss": "^3.0.0",
-    "@astrojs/tailwind": "^5.0.2",
+    "@astrojs/mdx": "^2.0.1",
+    "@astrojs/react": "^3.0.7",
+    "@astrojs/rss": "^4.0.1",
+    "@astrojs/tailwind": "^5.0.3",
     "@fontsource-variable/rubik": "^5.0.19",
     "@fontsource/libre-baskerville": "^5.0.8",
     "@fontsource/monoton": "^5.0.17",
     "@fontsource/source-serif-pro": "^5.0.8",
-    "astro": "^3.4.3",
-    "tailwindcss": "^3.3.5"
+    "astro": "^4.0.4",
+    "katex": "^0.16.9",
+    "react-discord-message": "^1.0.0",
+    "tailwindcss": "^3.3.5",
+    "wc-discord-message": "^2.0.4"
+  },
+  "devDependencies": {
+    "@types/katex": "^0.16.7"
   }
 }

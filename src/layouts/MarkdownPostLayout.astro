@@ -5,13 +5,17 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-    <p class="text-lg flex justify-center italic pb-8">{frontmatter.pubDate.slice(0, 10)}</p>
-    <div class="tags">
+    <p class="text-lg flex justify-center italic pb-4">{frontmatter.description}</p>
+
+    <div class="tags flex justify-center pb-4">
+        <p class="italic pb-4 px-2">{frontmatter.pubDate.slice(0, 10)}</p>
+        <p>*</p>
         {
             frontmatter.tags.map((tag: String) => (
-                <p class="tag">
+                <p class="italic underline px-2">
                     <a href={`/tags/${tag}`}>{tag}</a>
                 </p>
+                <p>*</p>
             ))
         }
     </div>

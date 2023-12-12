@@ -17,7 +17,7 @@ const { pageTitle } = Astro.props;
   <body>
     <Header />
     <div class="flex flex-col items-center">
-        <h1 class="font-title text-5xl pb-10 lowercase">{pageTitle}</h1>
+        {pageTitle == "" ? <></> : <h1 class="font-title text-5xl pb-10 lowercase">{pageTitle}</h1>}
         <div class="min-h-screen w-1/2">
             <slot />
         </div>
