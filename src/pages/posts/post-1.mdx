@@ -59,4 +59,10 @@ I shared my results online in the [Origami-Dan Discord](https://disboard.org/ser
 was kind enough to give me some tips on optimization. He advised to pre-compute the 3,000 intersections and store the coordinates
 in a data-structure reducing time complexity that came with recalculating the intersections.
 
-# Hosting
+# Other Applications
+Finding a starting reference point also gives a perfect vertex for algorithmically solving a crease pattern. When the starting vertex
+is identified, a level-order traversal can be run to locate all other vertices and remove error from the edge detection.
+
+Another application is diagram generation for precreasing. If the folds for the starting reference point can be found, they can be
+drawn into instructional diagrams. If the above algorithm was realized, folds could be calculated for all other vertices and consequently
+be drawn into instructional diagram steps as well, automating the tedious process of diagram drawing.

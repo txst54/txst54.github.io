@@ -5,5 +5,6 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
     integrations: [tailwind(), mdx()],
-    site: "https://cs.utexas.edu/clintw/"
+    site: "https://cs.utexas.edu/users/clintw",
+    base: "/users/clintw"
 });
