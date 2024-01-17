@@ -2,6 +2,10 @@
 import Navigation from "@components/Navigation.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import ListItem from "@components/ListItem.astro";
+import config from "../config.json";
+import A from "@components/aRoot.astro";
+
+const baseUrl = config.baseUrl;
 const allPosts = await Astro.glob("./posts/*.mdx");
 const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
 const postsByTag = Object.fromEntries(
@@ -20,10 +24,10 @@ const pageTitle = "Home Page";
              undergraduate student majoring in Computer Science at the University of Texas at Austin.
         </p>
         <p className="flex-wrap">
-            For information about my site's architecture, see the <a class="italic" href="/posts/site">Site page</a>;
-            for information about relevant sites I like and my contact information, see the
-            <a class="italic" href="/links">Links page</a>; for a list of all posts ordered chronologically, see the
-            <a class="italic" href="/posts">Posts page</a>. The design of this website was heavily inspired by
+            For information about my site's architecture, see the <A className="italic" href="/posts/site">Site page</A>;
+            for information about relevant sites I like, projects I have worked on, and my contact information, see the
+            <A className="italic" href="/links">Links page</A>; for a list of all posts ordered chronologically, see the
+            <A className="italic" href="/posts">Posts page</A>. The design of this website was heavily inspired by
             <a class="italic" href="https://gwern.net">Gwern.net</a>.
         </p>
     </article>
@@ -31,7 +35,7 @@ const pageTitle = "Home Page";
         {
             tags.filter((tag) => postsByTag[tag].length > 0).map((tag) => (
                 <div class="p-4 px-8">
-                    <h2 class="font-title text-4xl"><a href={"/tags/" + tag}>{tag}</a></h2>
+                    <h2 class="font-title text-4xl"><A href={"/tags/" + tag}>{tag}</A></h2>
                     <hr class="pb-4"></hr>
                     {postsByTag[tag].map((post) => (
                         <ListItem

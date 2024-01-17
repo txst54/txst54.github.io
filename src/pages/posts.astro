@@ -9,7 +9,7 @@ const allPosts = await Astro.glob('../pages/posts/*.mdx');
     <h1>list</h1>
     <ul class="pl-12">
         {allPosts.map((post) => 
-            <ListItem url={post.url} title={post.frontmatter.title} />
+            <ListItem url={post.url} title={post.frontmatter.title}/>
         )}
     </ul>
 </BaseLayout>

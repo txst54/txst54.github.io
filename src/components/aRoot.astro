@@ -1,0 +1,6 @@
+---
+import config from "../config.json";
+const baseUrl = config.baseUrl;
+const { className, href, content } = Astro.props;
+---
+<a class=`${className}` href=`${baseUrl}${href}`><slot></slot></a>

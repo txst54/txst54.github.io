@@ -9,19 +9,46 @@ const socials = [
         user: "txst54",
         displayText: "Github",
     },
+    {
+        platform: "linkedin",
+        user: "in/clint-wang/",
+        displayText: "LinkedIn",
+    },
+    {
+        platform: "instagram",
+        user: "txst_054",
+        displayText: "Instagram",
+    },
 ];
 ---
 
 <BaseLayout pageTitle="A List of Relevant Links">
     <article>
-    <h1>Socials</h1>
-    <ul class="pl-12">
-        {
-            socials.map((site) => (
-                <ListItem url={"https://" + site.platform + "/" + site.user} title={site.displayText}>
-                </ListItem>
-            ))
-        }
-    </ul>
+        <p>This page contains a list of useful links. The socials list contains links to places I can be found online;
+            the projects list contains links to projects I have built; the readings list contains links to articles written
+            by others that I am currently reading. </p>
+        <h1>Socials</h1>
+        <ul class="pl-12">
+            {
+                socials.map((site) => (
+                    <ListItem url={"https://" + site.platform + ".com/" + site.user} title={site.displayText}>
+                    </ListItem>
+                ))
+            }
+        </ul>
+        <h1>Projects</h1>
+        <ul class="pl-12">
+            <ListItem url="https://texascapitalcollective.org" title="TexasCapitalCollective.org">
+            </ListItem>
+            <ListItem url="https://colab.research.google.com/drive/1zbKQMQm-CBQU1WjXgZEqbIYEnOUe-WI-?usp=sharing"
+                title="Reverse Reference Finder"/>
+        </ul>
+        <h1>Readings</h1>
+        <ul class="pl-12">
+            <ListItem url="https://origamiusa.org/system/files/thefold/thefold79_Fractal_Origami_for_Beginners_Ikegami_0.pdf" title="Fractal Origami For Beginners (Recursive Design Theory) - Ushio Ikegami"></ListItem>
+            <ListItem url="https://medium.datadriveninvestor.com/how-to-delta-hedge-an-option-part-i-2efc91b24400" title="Delta Hedging - Mark Jamison"></ListItem>
+            <ListItem url="https://note.com/dangerous_fold/n/n95e3fd9c984c" title="Reduced Paper Edge Calculation - Kei Morisue"></ListItem>
+            <ListItem url="https://abrashiorigami.com/colour-change-part-1/" title="Color Change Perimeter Theorem - Abrashi"></ListItem>
+        </ul>
     </article>
 </BaseLayout>

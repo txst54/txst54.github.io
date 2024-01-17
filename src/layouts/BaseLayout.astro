@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import aRoot from '../components/aRoot.astro';
 import '@fontsource-variable/rubik';
 import '@fontsource/source-serif-pro'
 import '@fontsource/libre-baskerville';
@@ -14,11 +15,11 @@ const { pageTitle } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
-  <body>
+  <body >
     <Header />
-    <div class="flex flex-col items-center">
+    <div class="flex flex-col items-center pb-16">
         {pageTitle == "" ? <></> : <h1 class="font-title text-5xl pb-10 lowercase">{pageTitle}</h1>}
-        <div class="min-h-screen w-1/2">
+        <div class="md:w-1/2 w-full">
             <slot />
         </div>
     </div>

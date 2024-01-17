@@ -1,11 +1,12 @@
 ---
 import '@fontsource/monoton';
+import A from "./aRoot.astro";
 const style = "p-6 px-28 text-2xl border-b"
 ---
 <div class="flex">
-    <a href="/" class="font-logo text-8xl px-8">C</a>
-    <a href="/posts/site" class={style}>site</a>
-    <a href="/links" class={style}>links</a>
-    <a href="/posts" class={style}>posts</a>
+    <A href="/" className="font-logo text-8xl px-8">C</A>
+    <A href="/posts/site" className={style}>site</A>
+    <A href="/links" className={style}>links</A>
+    <A href="/posts" className={style}>posts</A>
     <div class="px-8"/>
 </div>

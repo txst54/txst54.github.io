@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import "../components/style.css";
+import A from "../components/aRoot.astro";
 const { frontmatter } = Astro.props;
 ---
 
@@ -13,7 +14,7 @@ const { frontmatter } = Astro.props;
         {
             frontmatter.tags.map((tag: String) => (
                 <p class="italic underline px-2">
-                    <a href={`/tags/${tag}`}>{tag}</a>
+                    <A href={`/tags/${tag}`}>{tag}</A>
                 </p>
                 <p>*</p>
             ))

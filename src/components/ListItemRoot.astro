@@ -1,0 +1,7 @@
+---
+import A from "./aRoot.astro";
+const { title, url } = Astro.props
+---
+<li>
+    <A className="underline text-lg decoration-gray-300 decoration-1" href={url}>{title}</A>
+</li>
